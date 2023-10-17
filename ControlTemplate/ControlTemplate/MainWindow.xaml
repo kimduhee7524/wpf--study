@@ -6,9 +6,15 @@
         xmlns:local="clr-namespace:ControlTemplate"
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
-    <Grid>
-        <StackPanel>
-            <Button Content="버튼입니다" Style="{StaticResource ButtonStyle}"/>
-        </StackPanel>
-    </Grid>
+    <Window.Resources>
+        <DataTemplate x:Key="ContentTemplate">
+            <TextBlock Text="바꾸기"/>
+        </DataTemplate>
+    </Window.Resources>
+
+    <StackPanel>
+        <Button Style="{StaticResource ButtonStyle}" 
+                     Content="버튼"
+                     ContentTemplate="{StaticResource ContentTemplate}"></Button>
+    </StackPanel>
 </Window>
