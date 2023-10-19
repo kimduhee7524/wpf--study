@@ -1,0 +1,17 @@
+﻿<Window x:Class="CustomControl.UI.Views.PracticeWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:units="clr-namespace:CustomControl.UI.Units"
+        xmlns:ag="clr-namespace:WpfAutoGrid;assembly=WpfAutoGrid.Core"
+        mc:Ignorable="d"
+        Title="PracticeWindow" Height="450" Width="800">
+    <!-- Grid -> ag로 변경 -->
+    <ag:AutoGrid Rows="Auto,*" Columns="*" >
+        <StackPanel HorizontalAlignment="Left">
+            <units:StudyButton Content="doit"/>
+        </StackPanel>
+        <units:StudyListBox Grid.Row="1"/>
+    </ag:AutoGrid>
+</Window>
